@@ -647,17 +647,25 @@ button {
   overflow: hidden;
 }
 
+.award-scene > *:not(.award-rays) {
+  position: relative;
+  z-index: 1;
+}
+
 .award-rays {
   position: absolute;
+  z-index: 0;
   width: 280px;
   aspect-ratio: 1;
   border-radius: 50%;
   background: conic-gradient(from 0deg, transparent, oklch(0.94 0.16 85 / 0.55), transparent 18%);
   animation: spin 4.5s linear infinite;
+  pointer-events: none;
 }
 
 .award-medal {
   position: relative;
+  z-index: 1;
   background:
     radial-gradient(circle at 34% 26%, oklch(1 0.02 90), transparent 16%),
     linear-gradient(135deg, oklch(0.93 0.17 87), oklch(0.74 0.17 55));
